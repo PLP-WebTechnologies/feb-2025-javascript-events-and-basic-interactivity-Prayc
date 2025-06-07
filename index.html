@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interactive Demo Site</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>Welcome to Our Interactive Demo Site</h1>
+
+  <!-- Section 1: Event Handling -->
+  <section>
+    <h2>Try These Interactive Features</h2>
+    
+    <button id="color-btn">Change My Background Color</button>
+    
+    <p id="hover-text">Hover over this text to see a cool effect.</p>
+    
+    <input 
+      type="text" 
+      id="keypress-input" 
+      placeholder="Type your name here..." 
+    />
+    <p id="keypress-output"></p>
+    
+    <button id="secret-btn">Double-click or long-press me for a surprise!</button>
+  </section>
+
+  <!-- Section 2: Image Gallery and FAQ -->
+  <section>
+    <h2>Photo Gallery & FAQs</h2>
+
+    <!-- Simple Image Gallery -->
+    <div id="gallery">
+      <img 
+        src="https://via.placeholder.com/300?text=Beach+Sunset" 
+        alt="Beach Sunset" 
+        class="gallery-img active" 
+      />
+      <img 
+        src="https://via.placeholder.com/300?text=Mountain+View" 
+        alt="Mountain View" 
+        class="gallery-img" 
+      />
+      <img 
+        src="https://via.placeholder.com/300?text=City+Lights" 
+        alt="City Lights" 
+        class="gallery-img" 
+      />
+      <br />
+      <button id="prev-img">Previous</button>
+      <button id="next-img">Next</button>
+    </div>
+
+    <!-- Accordion style FAQ -->
+    <div class="accordion">
+      <button class="accordion-header">What services do you offer?</button>
+      <div class="accordion-content">
+        We provide web design, app development, and digital marketing services tailored to your needs.
+      </div>
+
+      <button class="accordion-header">How can I get a quote?</button>
+      <div class="accordion-content">
+        Simply fill out our contact form or call us directly at (555) 123-4567.
+      </div>
+
+      <button class="accordion-header">What is your typical project timeline?</button>
+      <div class="accordion-content">
+        Most projects take between 4 to 8 weeks, depending on complexity.
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Newsletter Signup -->
+  <section>
+    <h2>Subscribe to Our Newsletter</h2>
+    <form id="signup-form" novalidate>
+      
+      <label>
+        Full Name (required):<br />
+        <input type="text" id="name" required />
+        <span class="error" id="name-error"></span>
+      </label>
+      <br /><br />
+
+      <label>
+        Email Address (required):<br />
+        <input type="email" id="email" required />
+        <span class="error" id="email-error"></span>
+      </label>
+      <br /><br />
+
+      <label>
+        Create a Password (min 8 characters):<br />
+        <input type="password" id="password" required minlength="8" />
+        <span class="error" id="password-error"></span>
+      </label>
+      <br /><br />
+
+      <button type="submit">Subscribe Now</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
